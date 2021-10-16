@@ -8,6 +8,35 @@
     <title>Document</title>
 </head>
 <body>
+    <fieldset>
+        <h1>ARR Calculator</h1>
+
+        <label for="currentArr">Current ARR: </label>
+        <input type="number" id="currentArr"><br>
+        
+        <label for="renewalDate">Renewal Date: </label>
+        <input type="date" id="renewalDate" value=""><br>
+
+        <label for="newArr">New ARR: </label>
+        <input type="number" id="newArr" value=""><br>
+
+        <label for="startDate">Start Date: </label>
+        <input type="date" id="startDate" value=""><br>
+
+        <label for="yearTotal">Total for Year: </label>
+        <input type="number" id="yearTotal" value=""><br>
+
+        <label for="newLicenseCount">New Licenses: </label>
+        <input type="number" id="newLicenseCount" value=""><br>
+        
+        <label for="currentLicenseCount">Current Licenses: </label>
+        <input type="number" id="currentLicenseCount" value=""><br>
     
+        <!-- <input type="submit" value="Crunch Numbers"> -->
+        <button type="submit" id="crunch">Crunch Numbers</button>
+    </fieldset>
+    <div id="output"></div>
+    <script src="main.js"></script>
 </body>
 </html>
+

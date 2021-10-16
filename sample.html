@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Bethany's Pie Shop!</title>
+    <meta name="author" content="Bethany's Pie Shop">
+    <meta name="description" content="Store front for Bethany's Pie Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="main">
+        <h1>Contact Us</h1>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <form action="contact.html" method="POST" enctypr="application/x-www-form-urlencoded">
+            <p>
+                <label for="nameField">*Your name:</label>
+                <input tabindex="7" id="nameField" type="text" required minlength="10" maxlength="75" name="customerName"><br>
+            </p>    
+            <p>
+                <label for="customerEmail">*Your email:</label>
+                <input tabindex="8" id="customerEmail" type="email" required name="customerEmail"><br>
+            </p>
+            <p>
+                <label for="customerPhone">*Your Phone:</label> 
+                <input tabindex="9" id="customerPhone" type="tel" pattern="\(\d{3}\) \d{3}-\d{4}" required name="customerPhone" placeholder="(555) 555-5555"><br>
+            </p>
+            <p>
+                <label>Phone type: </label> 
+            </p>
+
+            <label><input tabindex="10" type="radio" name="phoneType" value="cell"> Cell</label> 
+            <label><input tabindex="11" type="radio" name="phoneType" value="cell"> Work</label> 
+            <label><input tabindex="12" type="radio" name="phoneType" value="cell"> Home</label> <br>
+            
+            Ok to contact me:
+            <input tabindex="13" type="checkbox" name="okToContact" value="phone"> by Phone
+            <input tabindex="14" type="checkbox" name="okToContact" value="email"> by Email
+            <br>
+        </fieldset>
+
+        <input type="hidden" name="source" value="contactForm"><br>
+        
+        <fieldset>
+            <legend>Feedback</legend>
+
+            <textarea required tabindex="1" name="feedbackText" id="" cols="40" rows="3"></textarea><br>
+            
+            feedback type: <select tabindex="2" name="feedbackType" id="" mulitple="multiple" size="6">
+                <optgroup label="stores">
+                    <option value="webstore">Web Store</option>
+                    <option value="store">Physical Store</option>
+                </optgroup>
+                <option value="webtech">Website Issue</option>
+                <option value="general">General Feedback</option>
+            </select><br>
+
+            Severity: <input tabindex="3" type="range" min="1" max="10" name="severityRange"><br>
+            Severity: <input tabindex="4" type="number" min="1" max="10" name="severity"><br>
+            Issue Date: <input tabindex="5" type="date" name="issueDate"><br>
+            Issue Time: <input tabindex="6" type="Time" name="issueTime"><br>
+        </fieldset>
+        
+        
+        <input type="submit" value="sendContact">
+        </form>
+
+    </main>
+</body>
+
+</html>
